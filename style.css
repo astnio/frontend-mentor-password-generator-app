@@ -101,7 +101,7 @@ input {
 }
 
 .character-length-legend {
-	grid-column: 1;
+	grid-column: 1 / span 2;
 }
 
 #character-length-label {
