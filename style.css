@@ -44,19 +44,17 @@ li {
 	font-size: 18px;
 }
 
-h1,
-h2 {
-	font-size: 1.778rem;
-}
-
-h3,
-h4,
-h5,
-h6 {
-	font-size: 1.334rem;
-}
-
 body {
 	font-family: 'JetBrains Mono', monospace;
 	font-size: 1rem;
+}
+
+/*** Utility ***/
+
+.large-font {
+	font-size: 1.778rem;
+}
+
+.medium-font {
+	font-size: 1.334rem;
 }
