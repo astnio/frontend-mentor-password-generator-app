@@ -2,14 +2,20 @@ const slider = document.getElementById('password-length-range');
 const sliderProgress = document.querySelector('.slider-progress');
 
 const updateSliderProgress = () => {
-	const rangeValue = slider.value;
-	const rangeMax = slider.max;
-	const valuePercent = (rangeValue / rangeMax) * 100;
+	const sliderMin = parseFloat(slider.min);
+	const sliderMax = parseFloat(slider.max);
+	const sliderCurrentValue = parseFloat(slider.value);
 
-	sliderProgress.style.width = `${valuePercent}%`;
+	const sliderPercent =
+		((sliderCurrentValue - sliderMin) / (sliderMax - sliderMin)) * 100;
+
+	const sliderThumbPosition = (sliderPercent / 100) * (slider.offsetWidth - 28);
+
+	sliderProgress.style.width = `${sliderThumbPosition + 28 / 2}px`;
 };
 
 export const initSliderEventListner = () => {
 	slider.addEventListener('input', updateSliderProgress);
+	window.addEventListener('resize', updateSliderProgress);
 	updateSliderProgress();
 };
