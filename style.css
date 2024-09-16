@@ -104,7 +104,7 @@ input {
 	grid-column: 1;
 }
 
-.character-length-label {
+#character-length-label {
 	grid-column: -1;
 }
 
