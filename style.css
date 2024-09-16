@@ -45,8 +45,28 @@ li {
 }
 
 body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
 	font-family: 'JetBrains Mono', monospace;
 	font-size: 1rem;
+	color: var(--clr-on-surface-1);
+
+	background-color: var(--clr-surface-1);
+
+	min-height: 100vh;
+}
+
+main {
+	display: grid;
+	gap: 1rem;
+}
+
+section {
+	background-color: var(--clr-surface-2);
+	padding: 1rem;
 }
 
 /*** Utility ***/
