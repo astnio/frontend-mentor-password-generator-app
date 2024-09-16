@@ -24,26 +24,79 @@
 	<body>
 		<header><h1>Password Generator</h1></header>
 		<main>
-			<section>
-				<div>
-					<p>P4$5W0rD!</p>
-				</div>
+			<section class="output-container">
+				<p class="generated-password">P4$5W0rD!</p>
 				<button>Copy</button>
 			</section>
 			<section>
-				<div>
-					<p>Character Length</p>
-				</div>
-				<div>
-					<p>Include Uppercase Letters</p>
-					<p>Include Lowercase Letters</p>
-					<p>Include Numbers</p>
-					<p>Include Symbols</p>
-				</div>
-				<div>
-					<p>Strength</p>
-				</div>
-				<button>Generate</button>
+				<form action="">
+					<div>
+						<p>Character Length</p>
+						<p>10</p>
+						<div class="slider-container">
+							<input
+								type="range"
+								min="1"
+								max="20"
+								value="10"
+								class="slider"
+								id="password-length-range" />
+						</div>
+					</div>
+					<fieldset class="password-characters-filter-fieldset">
+						<div class="checkbox-container">
+							<input
+								class="checkbox"
+								type="checkbox"
+								id="chk-include-uppercase-letters" />
+							<label
+								class="checkbox-label"
+								for="chk-include-uppercase-letters">
+								Include Uppercase Letters
+							</label>
+						</div>
+
+						<div class="checkbox-container">
+							<input
+								class="checkbox"
+								type="checkbox"
+								id="chk-include-lowercase-letters" />
+							<label
+								class="checkbox-label"
+								for="chk-include-lowercase-letters">
+								Include Lowercase Letters
+							</label>
+						</div>
+
+						<div class="checkbox-container">
+							<input
+								class="checkbox"
+								type="checkbox"
+								id="chk-include-numbers" />
+							<label
+								class="checkbox-label"
+								for="chk-include-numbers">
+								Include Numbers
+							</label>
+						</div>
+
+						<div class="checkbox-container">
+							<input
+								class="checkbox"
+								type="checkbox"
+								id="chk-include-symbols" />
+							<label
+								class="checkbox-label"
+								for="chk-include-symbols">
+								Include Symbols
+							</label>
+						</div>
+					</fieldset>
+					<div>
+						<p>Strength</p>
+					</div>
+					<button>Generate</button>
+				</form>
 			</section>
 		</main>
 	</body>
