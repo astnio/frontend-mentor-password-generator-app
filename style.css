@@ -1,0 +1,62 @@
+@font-face {
+	font-family: 'JetBrains Mono';
+	src: url('./assets/fonts/JetBrainsMono-VariableFont_wght.ttf');
+}
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li {
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	--clr-surface-1: #18171f;
+	--clr-surface-2: #24232c;
+
+	--clr-on-surface-1: #e6e5ea;
+	--clr-on-surface-2: #817d92;
+
+	--clr-primary: #a4ffaf;
+
+	--clr-error: #f64a4a;
+	--clr-warning: #fb7c58;
+	--clr-notice: #f8cd65;
+	--clr-success: var(--clr-primary);
+
+	--radius-input: 0px;
+	--radius-button: 0px;
+	--radius-surface: 0px;
+
+	font-size: 18px;
+}
+
+h1,
+h2 {
+	font-size: 1.778rem;
+}
+
+h3,
+h4,
+h5,
+h6 {
+	font-size: 1.334rem;
+}
+
+body {
+	font-family: 'JetBrains Mono', monospace;
+	font-size: 1rem;
+}
