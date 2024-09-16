@@ -14,7 +14,7 @@ const updateSliderProgress = () => {
 	sliderProgress.style.width = `${sliderThumbPosition + 28 / 2}px`;
 };
 
-export const initSliderEventListner = () => {
+export const initSliderProgressUpdater = () => {
 	slider.addEventListener('input', updateSliderProgress);
 	window.addEventListener('resize', updateSliderProgress);
 	updateSliderProgress();
