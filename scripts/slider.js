@@ -1,11 +1,12 @@
-const sliderContainer = document.querySelector('.slider-container');
 const slider = document.getElementById('password-length-range');
+const sliderProgress = document.querySelector('.slider-progress');
 
 const updateSliderProgress = () => {
-	const progress =
-		((slider.value - slider.min) / (slider.max - slider.min)) * 100;
+	const rangeValue = slider.value;
+	const rangeMax = slider.max;
+	const valuePercent = (rangeValue / rangeMax) * 100;
 
-	sliderContainer.style.setProperty('slider-value', `${progress}%`);
+	sliderProgress.style.width = `${valuePercent}%`;
 };
 
 export const initSliderEventListner = () => {
