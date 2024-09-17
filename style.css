@@ -26,6 +26,7 @@ li {
 :root {
 	--clr-surface-1: #18171f;
 	--clr-surface-2: #24232c;
+	--clr-surface-3: #17161e;
 
 	--clr-on-surface-1: #e6e5ea;
 	--clr-on-surface-2: #817d92;
@@ -60,11 +61,17 @@ body {
 	min-height: 100vh;
 }
 
+h1 {
+	color: var(--clr-on-surface-2);
+	font-size: 1rem;
+	margin-bottom: 1rem;
+}
+
 main {
 	display: grid;
 	gap: 1rem;
 
-	max-width: 24rem;
+	max-width: 28rem;
 	width: 100%;
 }
 
@@ -72,10 +79,6 @@ section {
 	background-color: var(--clr-surface-2);
 	padding: 1rem;
 
-	width: 100%;
-}
-
-form {
 	width: 100%;
 }
 
@@ -91,7 +94,23 @@ input {
 	width: 100%;
 }
 
+.generated-password {
+	font-weight: 700;
+}
+
 /*** Form ***/
+
+.form-container {
+	min-height: 24rem;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 100%;
+	height: 100%;
+}
 
 .character-length-container {
 	display: grid;
@@ -106,6 +125,12 @@ input {
 
 #character-length-label {
 	grid-column: -1;
+}
+
+/*** Slider Legend ***/
+
+.character-length-legend {
+	font-size: 1rem;
 }
 
 /*** *** Slider *** ***/
@@ -228,6 +253,7 @@ input {
 
 .password-strength-container {
 	display: flex;
+	align-items: center;
 	justify-content: space-between;
 	width: 100%;
 	background-color: var(--clr-surface-1);
@@ -237,6 +263,20 @@ input {
 
 .password-strength-meter-container {
 	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.password-strength-container-label {
+	text-transform: uppercase;
+	color: var(--clr-on-surface-2);
+	font-weight: 700;
+}
+
+.password-strength-meter-label {
+	text-transform: uppercase;
+	font-weight: 700;
+	margin-right: 0.4rem;
 }
 
 .password-strength-meter {

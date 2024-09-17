@@ -4,36 +4,36 @@
 		<meta charset="UTF-8" />
 		<meta
 			name="viewport"
-			content="width=device-width, initial-scale=1.0"
-		/>
+			content="width=device-width, initial-scale=1.0" />
 
 		<link
 			rel="icon"
 			type="image/png"
 			sizes="32x32"
-			href="./assets/images/favicon-32x32.png"
-		/>
+			href="./assets/images/favicon-32x32.png" />
 
 		<title>Frontend Mentor | Password generator app</title>
 
 		<link
 			rel="stylesheet"
-			href="style.css"
-		/>
+			href="style.css" />
 		<script
 			defer
 			type="module"
-			src="./scripts/main.js"
-		></script>
+			src="./scripts/main.js"></script>
 	</head>
 	<body>
 		<header><h1>Password Generator</h1></header>
 		<main>
 			<section class="output-container">
-				<p class="generated-password">P4$5W0rD!</p>
+				<p
+					id="generated-password"
+					class="generated-password medium-font">
+					P4$5W0rD!
+				</p>
 				<button>Copy</button>
 			</section>
-			<section>
+			<section class="form-container">
 				<form action="">
 					<div class="character-length-container">
 						<p class="character-length-legend">Character Length</p>
@@ -45,8 +45,7 @@
 								max="20"
 								value="10"
 								class="slider"
-								id="password-length-range"
-							/>
+								id="password-length-range" />
 							<div class="slider-track"></div>
 							<div class="slider-progress"></div>
 						</div>
@@ -56,12 +55,10 @@
 							<input
 								class="checkbox"
 								type="checkbox"
-								id="chk-include-uppercase-letters"
-							/>
+								id="chk-include-uppercase-letters" />
 							<label
 								class="checkbox-label"
-								for="chk-include-uppercase-letters"
-							>
+								for="chk-include-uppercase-letters">
 								Include Uppercase Letters
 							</label>
 						</div>
@@ -70,12 +67,10 @@
 							<input
 								class="checkbox"
 								type="checkbox"
-								id="chk-include-lowercase-letters"
-							/>
+								id="chk-include-lowercase-letters" />
 							<label
 								class="checkbox-label"
-								for="chk-include-lowercase-letters"
-							>
+								for="chk-include-lowercase-letters">
 								Include Lowercase Letters
 							</label>
 						</div>
@@ -84,12 +79,10 @@
 							<input
 								class="checkbox"
 								type="checkbox"
-								id="chk-include-numbers"
-							/>
+								id="chk-include-numbers" />
 							<label
 								class="checkbox-label"
-								for="chk-include-numbers"
-							>
+								for="chk-include-numbers">
 								Include Numbers
 							</label>
 						</div>
@@ -98,12 +91,10 @@
 							<input
 								class="checkbox"
 								type="checkbox"
-								id="chk-include-symbols"
-							/>
+								id="chk-include-symbols" />
 							<label
 								class="checkbox-label"
-								for="chk-include-symbols"
-							>
+								for="chk-include-symbols">
 								Include Symbols
 							</label>
 						</div>
@@ -111,7 +102,7 @@
 					<div class="password-strength-container">
 						<p class="password-strength-container-label">Strength</p>
 						<div class="password-strength-meter-container">
-							<p class="password-strength-meter-label">Medium</p>
+							<p class="password-strength-meter-label medium-font">Medium</p>
 							<div class="password-strength-meter">
 								<div class="password-strength-meter-bar">[X]</div>
 								<div class="password-strength-meter-bar">[X]</div>
