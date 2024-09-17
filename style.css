@@ -284,6 +284,25 @@ form {
 	gap: 0.4rem;
 }
 
+.password-strength-meter-bar {
+	height: 1.6rem;
+	width: 0.5rem;
+	border: 2px solid var(--clr-on-surface-1);
+}
+
+.meter-bar-notice {
+	background-color: var(--clr-notice);
+}
+
+.meter-bar-warning {
+	background-color: var(--clr-warning);
+	border: 2px solid var(--clr-warning);
+}
+
+.meter-bar-success {
+	background-color: var(--clr-primary);
+}
+
 /*** Utility ***/
 
 .large-font {
