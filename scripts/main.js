@@ -24,3 +24,4 @@ btnCopyPassword.addEventListener('click', () => {
 });
 
 initSliderProgressUpdater();
+charLengthLabel.innerText = charLengthSlider.value;
