@@ -361,6 +361,19 @@ form {
 	cursor: pointer;
 }
 
+.btn-generate-password-icon {
+	margin-left: 0.6rem;
+}
+
+.button > span > svg {
+	fill: var(--clr-surface-1);
+	transition: fill 0.15s ease-in-out;
+}
+
+.button:hover > span > svg {
+	fill: var(--clr-primary);
+}
+
 .btn-copy-container {
 	position: relative;
 
