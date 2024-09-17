@@ -61,20 +61,19 @@ function getFinalPasswordStrengthScore(password, passwordLength) {
 	}
 }
 
-export function evaluatePassword(password, passwordLength) {
-	strengthScore = 0;
-
-	const finalScore = getFinalPasswordStrengthScore(password, passwordLength);
-
-	passwordStrengthLabel.textContent = getPasswordStrengthValue(finalScore);
-
-	setPasswordStrengthMeter(finalScore);
-}
-
 function getPasswordStrengthValue(strength) {
 	return Object.keys(passwordStrengths).find(
 		(key) => passwordStrengths[key] === strength
 	);
+}
+
+function resetPasswordStrengthMeters() {
+	passwordStrengthMeterBars.forEach((bar) => {
+		bar.classList.remove('meter-bar-notice');
+		bar.classList.remove('meter-bar-warning');
+		bar.classList.remove('meter-bar-error');
+		bar.classList.remove('meter-bar-success');
+	});
 }
 
 function setPasswordStrengthMeter(passwordStrength) {
@@ -102,11 +101,12 @@ function setPasswordStrengthMeter(passwordStrength) {
 	}
 }
 
-function resetPasswordStrengthMeters() {
-	passwordStrengthMeterBars.forEach((bar) => {
-		bar.classList.remove('meter-bar-notice');
-		bar.classList.remove('meter-bar-warning');
-		bar.classList.remove('meter-bar-error');
-		bar.classList.remove('meter-bar-success');
-	});
+export function evaluatePassword(password, passwordLength) {
+	strengthScore = 0;
+
+	const finalScore = getFinalPasswordStrengthScore(password, passwordLength);
+
+	passwordStrengthLabel.textContent = getPasswordStrengthValue(finalScore);
+
+	setPasswordStrengthMeter(finalScore);
 }
