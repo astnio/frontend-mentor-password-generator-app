@@ -44,7 +44,11 @@ export function getGeneratedPassword() {
 
 	for (let i = 0; i < charLengthSlider.value; i++) {
 		const randomNumber = Math.floor(Math.random() * userCharFunctions.length);
-		password.push(userCharFunctions[randomNumber]());
+		if (userCharFunctions.length > 0) {
+			password.push(userCharFunctions[randomNumber]());
+		} else {
+			password.push(0);
+		}
 	}
 
 	password = password.join('');
