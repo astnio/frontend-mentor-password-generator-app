@@ -121,16 +121,14 @@ form {
 
 .character-length-legend {
 	grid-column: 1 / span 2;
+	font-size: 1rem;
+	align-self: center;
 }
 
 #character-length-label {
 	grid-column: -1;
-}
-
-/*** Slider Legend ***/
-
-.character-length-legend {
-	font-size: 1rem;
+	font-weight: 700;
+	color: var(--clr-primary);
 }
 
 /*** *** Slider *** ***/
@@ -138,6 +136,10 @@ form {
 .slider-container {
 	isolation: isolate;
 	position: relative;
+
+	display: grid;
+	align-items: center;
+	justify-content: center;
 
 	grid-column-start: 1;
 	grid-column-end: 4;
