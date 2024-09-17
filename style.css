@@ -90,6 +90,7 @@ input {
 
 .output-container {
 	display: flex;
+	align-items: center;
 	justify-content: space-between;
 	width: 100%;
 }
@@ -358,6 +359,67 @@ form {
 	background-color: transparent;
 	color: var(--clr-primary);
 	cursor: pointer;
+}
+
+.btn-copy-container {
+	position: relative;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	width: calc(24px + 1rem);
+	height: calc(24px + 1rem);
+
+	aspect-ratio: 1;
+
+	margin: 0;
+	padding: 0;
+}
+
+#btn-copy {
+	position: absolute;
+	left: 50%;
+	top: 2px;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	width: 24px;
+	height: 24px;
+
+	aspect-ratio: 1;
+
+	border: none;
+	border-radius: 50%;
+
+	padding: 1rem;
+	margin: 0;
+
+	background: none;
+
+	transform: translate(-50%);
+
+	transition: top 0.15s ease-in-out;
+}
+
+#btn-copy:hover {
+	cursor: pointer;
+	top: -1px;
+}
+
+#btn-copy:hover > img {
+	filter: grayscale(100%) brightness(100%);
+}
+
+#btn-copy:active {
+	cursor: pointer;
+	top: 2px;
+}
+
+#btn-copy:active > img {
+	filter: grayscale(100%) brightness(80%);
 }
 
 /*** Utility ***/
