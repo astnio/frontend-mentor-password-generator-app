@@ -168,6 +168,10 @@ form {
 	margin: 0;
 }
 
+.slider:hover {
+	cursor: pointer;
+}
+
 .slider-track {
 	position: absolute;
 	top: 0;
