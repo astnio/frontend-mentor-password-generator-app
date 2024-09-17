@@ -416,6 +416,7 @@ form {
 
 .meter-bar-notice {
 	background-color: var(--clr-notice);
+	border: 2px solid var(--clr-notice);
 }
 
 .meter-bar-warning {
@@ -423,8 +424,14 @@ form {
 	border: 2px solid var(--clr-warning);
 }
 
+.meter-bar-error {
+	background-color: var(--clr-error);
+	border: 2px solid var(--clr-error);
+}
+
 .meter-bar-success {
 	background-color: var(--clr-primary);
+	border: 2px solid var(--clr-primary);
 }
 
 /*** Button ***/
