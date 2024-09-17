@@ -285,8 +285,8 @@ form {
 }
 
 .password-strength-meter-bar {
-	height: 1.6rem;
-	width: 0.5rem;
+	height: 28px;
+	width: 10px;
 	border: 2px solid var(--clr-on-surface-1);
 }
 
