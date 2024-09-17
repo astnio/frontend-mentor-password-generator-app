@@ -286,7 +286,7 @@ form {
 
 .password-strength-meter-bar {
 	height: 28px;
-	width: 10px;
+	width: 0.5rem;
 	border: 2px solid var(--clr-on-surface-1);
 }
 
@@ -301,6 +301,33 @@ form {
 
 .meter-bar-success {
 	background-color: var(--clr-primary);
+}
+
+/*** Button ***/
+
+.button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	border: none;
+	outline: 3px solid var(--clr-primary);
+	border-radius: var(--radius-button);
+	padding: 1rem;
+
+	text-transform: uppercase;
+	font-size: 1rem;
+	font-family: 'JetBrains Mono', monospace;
+
+	background-color: var(--clr-primary);
+
+	transition: background-color 0.15s ease-out, color 0.15s ease-out;
+}
+
+.button:hover {
+	background-color: transparent;
+	color: var(--clr-primary);
+	cursor: pointer;
 }
 
 /*** Utility ***/
