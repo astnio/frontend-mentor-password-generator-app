@@ -484,6 +484,8 @@ form {
 	margin-left: 0.2rem;
 }
 
+/*** Copied! Button ***/
+
 .btn-copy-container {
 	position: relative;
 
@@ -556,6 +558,33 @@ form {
 	text-transform: uppercase;
 	font-size: 0.8rem;
 	font-weight: 700;
+
+	pointer-events: none;
+
+	animation-name: copiedTextAnim;
+	animation-duration: 2s;
+	animation-timing-function: ease-in-out;
+	animation-fill-mode: both;
+	animation-play-state: paused;
+}
+
+/*** Copied Button Animation ***/
+
+@keyframes copiedTextAnim {
+	0% {
+		opacity: 0%;
+		transform: translateY(-50%) translateX(20px);
+	}
+	10% {
+		opacity: 100%;
+		transform: translateY(-50%) translateX(0);
+	}
+	40% {
+		opacity: 100%;
+	}
+	100% {
+		opacity: 0%;
+	}
 }
 
 /*** Utility ***/
