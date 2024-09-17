@@ -205,9 +205,12 @@ form {
 
 	background: var(--clr-on-surface-1);
 
+	outline: 0px solid var(--clr-on-surface-1);
 	border-radius: 50%;
 
 	cursor: pointer;
+
+	transition: outline 0.05s ease-in-out, background 0.1s ease-in-out;
 }
 
 .slider::-moz-range-thumb {
@@ -217,9 +220,12 @@ form {
 	background: var(--clr-on-surface-1);
 
 	border: none;
+	outline: 0px solid var(--clr-on-surface-1);
 	border-radius: 50%;
 
 	cursor: pointer;
+
+	transition: outline 0.05s ease-in-out, background 0.1s ease-in-out;
 }
 
 .slider::-ms-thumb {
@@ -228,10 +234,28 @@ form {
 
 	background: var(--clr-on-surface-1);
 
+	outline: 0px solid var(--clr-on-surface-1);
 	border: none;
 	border-radius: 50%;
 
 	cursor: pointer;
+
+	transition: outline 0.05s ease-in-out, background 0.1s ease-in-out;
+}
+
+.slider:hover::-webkit-slider-thumb {
+	outline: 2px solid var(--clr-primary);
+	background: var(--clr-surface-1);
+}
+
+.slider:hover::-moz-range-thumb {
+	outline: 2px solid var(--clr-primary);
+	background: var(--clr-surface-1);
+}
+
+.slider:hover::-ms-thumb {
+	outline: 2px solid var(--clr-primary);
+	background: var(--clr-surface-1);
 }
 
 /*** Checkbox Fieldset ***/
