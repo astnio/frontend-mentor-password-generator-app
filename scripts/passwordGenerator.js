@@ -42,8 +42,6 @@ export function getGeneratedPassword() {
 	if (chkNumber.checked) userCharFunctions.push(getNumber);
 	if (chkSymbols.checked) userCharFunctions.push(getSymbol);
 
-	console.log(userCharFunctions);
-
 	for (let i = 0; i < charLengthSlider.value; i++) {
 		const randomNumber = Math.floor(Math.random() * userCharFunctions.length);
 		password.push(userCharFunctions[randomNumber]());
@@ -51,6 +49,6 @@ export function getGeneratedPassword() {
 
 	password = password.join('');
 
-	evaluatePassword(password);
+	evaluatePassword(password, charLengthSlider.value);
 	return password;
 }

@@ -13,14 +13,62 @@ const passwordStrengths = {
 	Strong: 3,
 };
 
-export function evaluatePassword(password) {
-	//not using password right now, will implement later
+let strengthScore = 0;
 
-	const passwordStrengthsValues = Object.values(passwordStrengths);
-	const randomNum = Math.floor(Math.random() * passwordStrengthsValues.length);
-	passwordStrengthLabel.textContent = getPasswordStrengthValue(randomNum);
+function checkLength(passwordLength) {
+	if (passwordLength <= 4) {
+		strengthScore += 0;
+	} else if (passwordLength <= 8) {
+		strengthScore += 1;
+	} else if (passwordLength <= 16) {
+		strengthScore += 2;
+	} else {
+		strengthScore += 3;
+	}
+}
 
-	setPasswordStrengthMeter(randomNum);
+function checkCharDiversity(password) {
+	if (/[a-z]/.test(password)) {
+		strengthScore += 1;
+	}
+
+	if (/[A-Z]/.test(password)) {
+		strengthScore += 1;
+	}
+
+	if (/[0-9]/.test(password)) {
+		strengthScore += 1;
+	}
+
+	if (/[!@#$%^&*()_+\-=\[\]{}|;:,.<>?]/.test(password)) {
+		strengthScore += 1;
+	}
+}
+
+function getFinalPasswordStrengthScore(password, passwordLength) {
+	checkLength(passwordLength);
+
+	checkCharDiversity(password);
+
+	if (strengthScore <= 2) {
+		return 0;
+	} else if (strengthScore <= 4) {
+		return 1;
+	} else if (strengthScore <= 6) {
+		return 2;
+	} else {
+		return 3;
+	}
+}
+
+export function evaluatePassword(password, passwordLength) {
+	strengthScore = 0;
+
+	const finalScore = getFinalPasswordStrengthScore(password, passwordLength);
+
+	passwordStrengthLabel.textContent = getPasswordStrengthValue(finalScore);
+
+	setPasswordStrengthMeter(finalScore);
 }
 
 function getPasswordStrengthValue(strength) {
