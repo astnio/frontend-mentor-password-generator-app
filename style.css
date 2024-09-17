@@ -445,6 +445,19 @@ form {
 	filter: grayscale(100%) brightness(80%);
 }
 
+#btn-copied-label {
+	position: absolute;
+	right: 2.5rem;
+	top: 50%;
+
+	transform: translateY(-50%);
+
+	color: var(--clr-primary);
+	text-transform: uppercase;
+	font-size: 0.8rem;
+	font-weight: 700;
+}
+
 /*** Utility ***/
 
 .large-font {
