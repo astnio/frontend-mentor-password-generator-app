@@ -95,8 +95,19 @@ input {
 	width: 100%;
 }
 
+#generated-password-label {
+	display: none;
+}
+
 .generated-password {
 	font-weight: 700;
+	background: none;
+	border: none;
+	color: var(--clr-on-surface-1);
+}
+
+.generated-password::placeholder {
+	color: var(--clr-on-surface-2);
 }
 
 /*** Form ***/
