@@ -21,6 +21,7 @@ charLengthSlider.addEventListener('input', () => {
 
 btnCopyPassword.addEventListener('click', () => {
 	startAnimation();
+	navigator.clipboard.writeText(outputPasswordLabel.value);
 });
 
 initSliderProgressUpdater();
