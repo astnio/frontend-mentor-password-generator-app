@@ -51,8 +51,6 @@ export function getGeneratedPassword() {
 		}
 	}
 
-	password = password.join('');
-
 	evaluatePassword(password, charLengthSlider.value);
-	return password;
+	return password.join('');
 }
