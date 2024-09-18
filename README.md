@@ -36,7 +36,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [solution URL](https://www.frontendmentor.io/solutions/password-generator-using-flexbox-grid-and-javascript-with-regex-QFUbANDUJv)
 - Live Site URL: [live site URL](https://austinh-io.github.io/frontend-mentor-password-generator-app/)
 
 ## My process
